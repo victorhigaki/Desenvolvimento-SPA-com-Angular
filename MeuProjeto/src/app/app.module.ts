@@ -11,6 +11,7 @@ import { SobreComponent } from './institucional/sobre/sobre.component';
 import { FooterComponent } from './navegacao/footer/footer.component';
 import { HomeComponent } from './navegacao/home/home.component';
 import { MenuComponent } from './navegacao/menu/menu.component';
+import { ProdutosService } from './produtos/produtos.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { MenuComponent } from './navegacao/menu/menu.component';
     FormsModule,
     [RouterModule.forRoot(rootRouterConfig, { useHash: false })],
   ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+  providers: [ProdutosService, { provide: APP_BASE_HREF, useValue: '/' }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
