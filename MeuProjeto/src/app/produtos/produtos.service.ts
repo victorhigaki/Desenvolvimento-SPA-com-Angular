@@ -4,8 +4,8 @@ import { Produto } from './produto';
 import { Observable } from 'rxjs';
 
 @Injectable()
-export class ProdutosService {
-  protected UrlServiceV1: string = 'http://localhost:3000';
+export class ProdutoService {
+  protected UrlServiceV1: string = 'http://localhost:3000/';
 
   constructor(private http: HttpClient) {}
 

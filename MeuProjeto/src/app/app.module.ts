@@ -1,4 +1,5 @@
 import { APP_BASE_HREF } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,7 +12,8 @@ import { SobreComponent } from './institucional/sobre/sobre.component';
 import { FooterComponent } from './navegacao/footer/footer.component';
 import { HomeComponent } from './navegacao/home/home.component';
 import { MenuComponent } from './navegacao/menu/menu.component';
-import { ProdutosService } from './produtos/produtos.service';
+import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.component';
+import { ProdutoService } from './produtos/produtos.service';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,15 @@ import { ProdutosService } from './produtos/produtos.service';
     SobreComponent,
     ContatoComponent,
     DataBindingComponent,
+    ListaProdutoComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     [RouterModule.forRoot(rootRouterConfig, { useHash: false })],
   ],
-  providers: [ProdutosService, { provide: APP_BASE_HREF, useValue: '/' }],
+  providers: [ProdutoService, { provide: APP_BASE_HREF, useValue: '/' }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
