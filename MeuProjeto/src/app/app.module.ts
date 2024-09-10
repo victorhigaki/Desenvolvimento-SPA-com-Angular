@@ -4,6 +4,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+
+import {  registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+registerLocaleData(localePt)
+
 import { AppComponent } from './app.component';
 import { rootRouterConfig } from './app.routes';
 import { DataBindingComponent } from './Demos/data-binding/data-binding.component';
